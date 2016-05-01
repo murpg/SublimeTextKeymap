@@ -1,18 +1,18 @@
 [
 	// cf tags
 	// cfabort
-	{ "keys": ["ctrl+shift+a"], "command": "insert_snippet", "args": {"contents": "<cfabort>" } },
+	{ "keys": ["ctrl+shift+home"], "command": "insert_snippet", "args": {"contents": "<cfabort>" } },
 	// abort
-	{ "keys": ["ctrl+shift+a+s"], "command": "insert_snippet", "args": {"contents": "abort;" } },
+	{ "keys": ["ctrl+shift+end"], "command": "insert_snippet", "args": {"contents": "abort;" } },
 	//cfdump
 	{ "keys": ["ctrl+shift+d"], "command": "insert_snippet", "args": {"contents": "<cfdump var=\"#${0:$SELECTION}#\">" } },
 	// writedump
-	{ "keys": ["ctrl+alt+d+s"], "command": "insert_snippet", "args": {"contents": "writedump(${0:$SELECTION});" } },
+	{ "keys": ["ctrl+shift+w"], "command": "insert_snippet", "args": {"contents": "writedump(${0:$SELECTION});" } },
 	// cfoutput
 	{ "keys": ["ctrl+shift+o"], "command": "insert_snippet", "args": {"contents": "<cfoutput>#${0:$SELECTION}#</cfoutput>" } },
 	//cfproperty injects a module setting
-	{ "keys": ["ctrl+alt+r"], "command": "insert_snippet", "args": {"contents": "<cfproperty name=\"settings\" inject=\"coldbox:modulesettings:$1${0:$SELECTION}$1\">" } },
+	{ "keys": ["ctrl+shift+pagedown"], "command": "insert_snippet", "args": {"contents": "<cfproperty name=\"settings\" inject=\"coldbox:modulesettings:$1${0:$SELECTION}$1\">" } },
 	// property cfscript setting
-	{ "keys": ["ctrl+shift+r+s"], "command": "insert_snippet", "args": {"contents": "property name=\"settings\" inject=\"coldbox:modulesettings:$1${0:$SELECTION}$1\"; " } }
+	{ "keys": ["ctrl+shift+pageup"], "command": "insert_snippet", "args": {"contents": "property name=\"settings\" inject=\"coldbox:modulesettings:$1${0:$SELECTION}$1\"; " } }
 
 ]
