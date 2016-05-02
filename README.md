@@ -14,4 +14,8 @@ Any keymap named Default.sublime-keymap will always be applied in all platforms.
 - **Open:** Default (Windows).sublime-keymap file in a text editor
 - **Open Sublime Text 2 or 3:** Go to the top menu Preferences > Key Bindings-User
 - **Copy Paste:** The Default (Windows).sublime-keymap file save and test the key mappings
+- **Restart:** Restart Sublime Text
+
+####Resources for seeing the key bindings:
+A good resource is BoundKeys which can be installed from Package Control. Install BoundKeys and run the key shift + f10 to see a list of all of your bound keys.
 
