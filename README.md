@@ -19,3 +19,7 @@ Any keymap named Default.sublime-keymap will always be applied in all platforms.
 ####Resources for seeing the key bindings:
 A good resource is BoundKeys which can be installed from Package Control. Install BoundKeys and run the key shift + f10 to see a list of all of your bound keys.
 
+####Timeline for GIT CLI:
+One of my colleagues said to me yesterday; how can you have a timeline using the command line? Well open Git Bash and copy and paste the text and run the command form the file git-commandline.
+cd to one of your git repos in Git Bash and run git lg and press the enter key. She the beautiful timeline.
+
