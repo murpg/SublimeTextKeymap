@@ -1,0 +1,25 @@
+//check status
+git status
+
+//Add Files for Commiting
+git add -A
+
+//Commit local with 
+git commit -am "My commit message"
+
+//Set remote site
+git remote set-url origin git@bitbucket.org:projectname/gitfolder.git
+
+//Create Branch
+git checkout -b branchname
+
+//Push local branch to remote branch and setup tracking
+git push -u origin branchname
+
+//Delete Local Branch must make sure not on branch change to master
+git branch -D branchname
+
+//Delete Remote Branch
+git push origin :branchname
+or
+git push origin --delete branchname
