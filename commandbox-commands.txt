@@ -1,0 +1,10 @@
+
+CommandBox:folder-you-are-in>coldbox create app name=myDemoApp skeleton=simple script=false --installColdBox
+
+CommandBox:folder-you-are-in>coldbox create controller name=myController actions=index,foo,bar script=false --open
+
+CommandBox:folder-you-are-in>coldbox create module name=myModule author="George Murphy" script=false
+
+CommandBox:folder-you-are-in>coldbox create model name=User properties=fname,lname,email script=false persistence=singleton methods=onDiComplete --accessors --open
+
+CommandBox:folder-you-are-in>start cfengine=adobe@11
