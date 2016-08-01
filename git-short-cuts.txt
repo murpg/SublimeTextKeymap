@@ -105,3 +105,6 @@ git diff <local branch> <remote>/<remote branch>
 
 //Difference between remote file and local file
 git diff origin/master -- README.md
+
+//Stop git from showing the VIM editor on git pull
+git config --global core.mergeoptions --no-edit
