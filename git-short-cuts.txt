@@ -1,11 +1,17 @@
 //check status
 git status
 
+//ALWAYS DO A PULL FIRST FROM YOUR TRACKED REMOTE BRANCH
+git pull
+
 //Add Files for Commiting
 git add -A
 
 //Commit local with 
 git commit -am "My commit message"
+
+//View git remote
+git remote -v
 
 //Set remote site
 git remote set-url origin git@bitbucket.org:projectname/gitfolder.git
@@ -16,10 +22,86 @@ git checkout -b branchname
 //Push local branch to remote branch and setup tracking
 git push -u origin branchname
 
-//Delete Local Branch must make sure not on branch change to master
+//Get a remote branch you do not have then run the second command
+git fetch origin
+git checkout branch
+
+//Delete Local Branch must make sure not on branch that needs to be deleted
 git branch -D branchname
 
 //Delete Remote Branch
 git push origin :branchname
 or
 git push origin --delete branchname
+
+//Look at git global settings
+git config --global --list
+
+//This setting will set it so nothing is changed with the line endings this can be overwriiten in the .gitattributes file
+git config --global core.auto.crlf false
+
+//Create an ssh key
+ssh-keygen -t rsa -b 4096
+
+//Cherry pick individual files from one git branch to another
+git checkout --patch branchPickingFrom pathToFile/filename
+
+//Remove orphaned local and remote branches
+git remote update --prune
+
+//Show tracked and untracked branches
+git remote show origin
+
+//show commit hash numbers
+git log --oneline
+
+//revert to an earlier commit
+git checkout b46176a
+
+//pull a specific file from an earlier commit
+git checkout b46176a hello.py
+
+//remove a commit get the hash
+git log --oneline
+git revert b46176a
+
+//Revert the commit we just created
+git revert HEAD
+
+//Like git checkout, git reset is a versatile command with many configurations. It can be used to remove committed snapshots, although it’s more often used to undo changes in the staging area and the working directory. In either case, it should only be used to undo local changes—you should never reset snapshots that have been shared with other developers.
+
+//Remove the specified file from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes.
+git reset <file>
+
+//Reset the staging area to match the most recent commit, but leave the working directory unchanged. This unstages all files without overwriting any changes, giving you the opportunity to re-build the staged snapshot from scratch.
+git reset
+
+//Reset the staging area and the working directory to match the most recent commit. In addition to unstaging changes, the --hard flag tells Git to overwrite all changes in the working directory, too. Put another way: this obliterates all uncommitted changes, so make sure you really want to throw away your local developments before using it.
+git reset --hard
+
+//Move the current branch tip backward to <commit>, reset the staging area to match, but leave the working directory alone. All changes made since <commit> will reside in the working directory, which lets you re-commit the project history using cleaner, more atomic snapshots.
+git reset <commit>
+
+//Move the current branch tip backward to <commit> and reset both the staging area and the working directory to match. This obliterates not only the uncommitted changes, but all commits after <commit>, as well
+git reset --hard <commit>
+
+//git clean allows you to remove untracked files and directories it is permanent so be careful. Do a dry run first
+git clean -n (this does a dry run)
+
+//Remove ALL untracked files in local repo only
+git clean -f
+
+//Remove untracked files, but limit the operation to the specified path.
+git clean -f <path>
+
+//Remove untracked files and untracked directories from the current directory.
+git clean -df
+
+//Remove untracked files from the current directory as well as any files that Git usually ignores.
+git clean -xf
+
+//Difference between local branch and remote branch
+git diff <local branch> <remote>/<remote branch>
+
+//Difference between remote file and local file
+git diff origin/master -- README.md
