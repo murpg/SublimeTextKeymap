@@ -1,3 +1,5 @@
+```bash
+
 //check status
 git status
 
@@ -68,6 +70,7 @@ git revert b46176a
 //Revert the commit we just created
 git revert HEAD
 
+
 //Like git checkout, git reset is a versatile command with many configurations. It can be used to remove committed snapshots, although it’s more often used to undo changes in the staging area and the working directory. In either case, it should only be used to undo local changes—you should never reset snapshots that have been shared with other developers.
 
 //Remove the specified file from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes.
@@ -111,3 +114,5 @@ git config --global core.mergeoptions --no-edit
 
 //Show all files that were modified in commit
 git show --pretty="" --name-only hashofcommit
+
+```
