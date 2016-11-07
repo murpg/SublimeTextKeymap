@@ -115,4 +115,11 @@ git config --global core.mergeoptions --no-edit
 //Show all files that were modified in commit
 git show --pretty="" --name-only hashofcommit
 
+//Allow long file paths in windows
+git config --system core.longpaths true
+
+//Use Verbose with items Make sure it is after the command or it will not work
+git 'command' -v
+git 'command' --dry-run 
+
 ```
