@@ -122,4 +122,6 @@ git config --system core.longpaths true
 git 'command' -v
 git 'command' --dry-run 
 
+//Git clone a specific branch
+git clone -b my-branch git@bitbucket.org:projectname/gitfolder.git
 ```
