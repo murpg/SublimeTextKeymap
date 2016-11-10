@@ -112,8 +112,9 @@ git diff origin/master -- README.md
 //Stop git from showing the VIM editor on git pull
 git config --global core.mergeoptions --no-edit
 
-//Show all files that were modified in commit
+//Show all files that were modified in commit status will show modified or added
 git show --pretty="" --name-only hashofcommit
+git show --pretty="" --name-status hashofcommit
 
 //Allow long file paths in windows
 git config --system core.longpaths true
