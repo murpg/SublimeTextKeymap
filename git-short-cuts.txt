@@ -125,4 +125,12 @@ git 'command' --dry-run
 
 //Git clone a specific branch
 git clone -b my-branch git@bitbucket.org:projectname/gitfolder.git
+
+// Delete a git tag locally and on the remote repo
+git tag -d tagname
+git push origin :refs/tags/tagname
+
+// Push all tags and push single tag
+git push origin --tags
+git push origin tagname
 ```
