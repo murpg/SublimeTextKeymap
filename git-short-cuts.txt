@@ -139,4 +139,26 @@ git commit modules_app build -m "updated sql script"
 
 // Revert to last commit discarding changes
 git reset --hard
+
+// This shows me what is inside the stash
+git stash show -p
+
+// This removes what was in the stash and applies it
+git stash pop
+
+// This applies what is in the stash but also keeps it in the stash also
+git stash apply
+
+// This shows a list of what is in the stash.
+git stash list
+
+// Cherry pick from the list if you are on Git 2.11 will not need the quotes
+git stash pop stash@"{1}" or git stash apply stash@"{1}"
+
+// Shows just the names of the files (not the contents) in your first stash
+git stash show -p stash@{0}
+
+// One very useful feature is to list contents of all local stashes
+git stash list | awk -F: '{ git stash pop stash@"{1}"print "\n\n\n\n"; print $0; print "\n\n"; system("git stash show -p " $1); }'
+
 ```
