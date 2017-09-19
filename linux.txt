@@ -1,0 +1,7 @@
+select * from user_tab_cols where column_name='CALEMAILGROUPID';
+
+--Use this first to get list
+
+find . -name "*.txt" -type f
+
+find . -name "*.txt" -type f -delete
