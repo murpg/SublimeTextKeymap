@@ -161,4 +161,7 @@ git stash show -p stash@{0}
 // One very useful feature is to list contents of all local stashes
 git stash list | awk -F: '{ git stash pop stash@"{1}"print "\n\n\n\n"; print $0; print "\n\n"; system("git stash show -p " $1); }'
 
+// List all commited files
+git diff-tree --no-commit-id --name-only -r hashofcommit
+
 ```
