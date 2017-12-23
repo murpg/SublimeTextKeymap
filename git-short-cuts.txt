@@ -164,4 +164,7 @@ git stash list | awk -F: '{ git stash pop stash@"{1}"print "\n\n\n\n"; print $0;
 // List all commited files
 git diff-tree --no-commit-id --name-only -r hashofcommit
 
+// Clean history of things that should have been added to .gitignore file but were not
+git filter-branch --tree-filter 'rm -rf logs' -f --prune-empty HEAD
+
 ```
