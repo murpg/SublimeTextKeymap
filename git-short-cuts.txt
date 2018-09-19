@@ -167,4 +167,7 @@ git diff-tree --no-commit-id --name-only -r hashofcommit
 // Clean history of things that should have been added to .gitignore file but were not
 git filter-branch --tree-filter 'rm -rf logs' -f --prune-empty HEAD
 
+// Dealing with long path and file names in Windows
+git config --system core.longpaths true
+
 ```
