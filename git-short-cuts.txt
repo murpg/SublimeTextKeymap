@@ -170,4 +170,16 @@ git filter-branch --tree-filter 'rm -rf logs' -f --prune-empty HEAD
 // Dealing with long path and file names in Windows
 git config --system core.longpaths true
 
+// Add a Git Submodule to your existing project. By default, submodules will add the subproject into a directory named the same as the repository, in this case “DbConnector”. You can add a different path at the end of the command if you want it to go elsewhere.  
+git submodule add https://github.com/chaconinc/DbConnector
+
+// Cloning a Project with Submodules. When you clone such a project, by default you get the directories that contain submodules, but none of the files within them yet.  
+git clone https://github.com/chaconinc/MainProject
+
+// The DbConnector directory is there, but empty. You must run two commands: git submodule init to initialize your local configuration file, and git submodule update to fetch all the data from that project and check out the appropriate commit listed in your superproject:  git submodule init  
+git submodule update
+git clone https://github.com/chaconinc/MainProject  
+
+
+
 ```
