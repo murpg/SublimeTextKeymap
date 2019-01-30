@@ -181,8 +181,12 @@ git submodule update
 git clone https://github.com/chaconinc/MainProject  
 
 // Remove directory from git but NOT local  
-git rm -r --cached myFolder  
+git rm -r --cached myFolder
 
+// Stop VIM from coming up when you do merges in Git Bash
+git config --global mergetool.prompt false
+about git merge stuff: it depends on your git installation too: 
+https://mirrors.edge.kernel.org/pub/software/scm/git/docs/git-merge.html, perhaps you need to define `GIT_MERGE_AUTOEDIT` env variable to `no`.
 
 
 ```
