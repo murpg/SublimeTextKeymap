@@ -191,5 +191,9 @@ https://mirrors.edge.kernel.org/pub/software/scm/git/docs/git-merge.html, perhap
 // Get all branches back when you do git fetch --all
 git config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
 
+// See a visual commit history of directories
+alias gdf='gitk --follow --all -p'
+gdf directory
+
 
 ```
