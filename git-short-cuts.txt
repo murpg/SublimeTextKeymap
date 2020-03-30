@@ -195,5 +195,8 @@ git config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
 alias gdf='gitk --follow --all -p'
 gdf directory
 
+//How to remove a merge branch
+git checkout master
+git revert -m 1 <<SHA1 value>>
 
 ```
