@@ -199,4 +199,7 @@ gdf directory
 git checkout master
 git revert -m 1 <<SHA1 value>>
 
+//If you ever get this error message filename to long
+git config --system core.longpaths true
+
 ```
