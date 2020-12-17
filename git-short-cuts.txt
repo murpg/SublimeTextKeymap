@@ -202,4 +202,7 @@ git revert -m 1 <<SHA1 value>>
 //If you ever get this error message filename to long
 git config --system core.longpaths true
 
+//How to show what files will be added or overwritten with a git pull
+git fetch origin ; git diff --name-only master origin/master
+
 ```
