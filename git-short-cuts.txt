@@ -205,4 +205,11 @@ git config --system core.longpaths true
 //How to show what files will be added or overwritten with a git pull
 git fetch origin ; git diff --name-only master origin/master
 
+//If you want to count the commits on a branch that are made since you created the branch
+Examples
+git checkout master
+git checkout -b test
+<We do 3 commits>
+git rev-list --count HEAD ^master
+
 ```
