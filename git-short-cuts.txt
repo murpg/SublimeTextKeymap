@@ -212,4 +212,7 @@ git checkout -b test
 <We do 3 commits>
 git rev-list --count HEAD ^master
 
+//Great way to resolve conflicts
+https://lostechies.com/joshuaflanagan/2010/01/29/how-to-resolve-a-binary-file-conflict-with-git/
+
 ```
