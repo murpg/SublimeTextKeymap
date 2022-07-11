@@ -215,4 +215,14 @@ git rev-list --count HEAD ^master
 //Great way to resolve conflicts
 https://lostechies.com/joshuaflanagan/2010/01/29/how-to-resolve-a-binary-file-conflict-with-git/
 
+//See the commits for a partidular day
+git log --after="2022-07-07 00:00" --before="2022-07-08 13:59"
+
+//Checkout a particular git commit based on hash
+git checkout hash
+git checkout -b newbranch hash
+
+//Great Post How to revert a Git repository to a previous commit?
+https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit
+
 ```
