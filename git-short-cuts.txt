@@ -88,6 +88,22 @@ git reset <commit>
 //Move the current branch tip backward to <commit> and reset both the staging area and the working directory to match. This obliterates not only the uncommitted changes, but all commits after <commit>, as well
 git reset --hard <commit>
 
+//Hard reset to match remote master exactly (discards local changes)
+git reset --hard origin/master
+
+//Delete local master and recreate from remote
+git checkout some-other-branch  # switch away from master first
+git branch -D master            # delete local master
+git checkout -b master origin/master  # recreate from remote
+
+--hard will discard ALL local changes and uncommitted work
+--soft keeps your changes staged
+--mixed (default) keeps changes but unstages them
+
+//Before resetting, consider See what changes you'd lose
+git status
+git diff HEAD origin/master
+
 //git clean allows you to remove untracked files and directories it is permanent so be careful. Do a dry run first
 git clean -n (this does a dry run)
 
